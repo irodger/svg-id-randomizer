@@ -1,0 +1,7 @@
+{
+  "name": "SvgIdRandomizer",
+  "id": "804532959937451122",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html"
+}

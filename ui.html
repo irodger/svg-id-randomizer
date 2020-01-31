@@ -1,0 +1,50 @@
+<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function selectElementContents(el) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range)
+  }
+  window.onmessage = async event => {
+    const data = event.data.pluginMessage.data;
+
+    if (event.data.pluginMessage.type === 'show') {
+      const codeEl = document.querySelector('#code');
+      new ClipboardJS('.copy');
+      codeEl.textContent = data;
+      selectElementContents(codeEl);
+    }
+  }
+</script>
+
+<html>
+  <style>
+    .copy {
+      border: 1px solid #e5e5e5;
+      background: white;
+      padding: 8px 12px;
+      font-weight: 600;
+      width: 100%;
+      transition: border 0.2s ease, background 0.3s ease-in-out;
+    }
+
+    .copy:hover {
+      background: #efefef;
+    }
+    .copy:focus {
+      outline: none;
+    }
+    .copy:active {
+      border: 1px solid #666;
+    }
+  </style>
+  <div>
+    <p>The svg code below contains unique id's</p>
+    <button class="copy" data-clipboard-target="#code">
+      Copy to clipboard
+    </button>
+    <pre><code id="code" style="white-space:pre-wrap;">There will be printed svg code</code></pre>
+  </div>
+</html>

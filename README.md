@@ -1,6 +1,8 @@
 Figma plugin to copy svg as a plain text with unique randomized ids.
 ## SVG code with unique links ids
 
+<img src="https://www.figma.com/community/plugin/804532959937451122/thumbnail" width="100%">
+
 ### What is it?
 Plugin set unique ids for gradients and masks into the svg code. 
 

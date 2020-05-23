@@ -1,4 +1,4 @@
-Figma plugin to copy svg as a plain text with unique randomized ids.
+Figma plugin to copy svg as a plain text with unique randomized ids. You can install it [here](https://www.figma.com/community/plugin/804532959937451122/SVG-code-with-unique-links-ids).
 ## SVG code with unique links ids
 
 <img src="https://www.figma.com/community/plugin/804532959937451122/thumbnail" width="100%">
